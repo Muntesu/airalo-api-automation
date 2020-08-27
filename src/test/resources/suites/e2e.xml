@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="End to End Test suite" verbose="5">
+
+    <test name="End-to-end Check">
+        <groups>
+            <run>
+                <include name="e2e" />
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.ocs.backend.*" />
+        </packages>
+    </test>
+</suite>

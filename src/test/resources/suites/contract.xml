@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Contract Test suite" verbose="5">
+
+    <test name="Contract tests">
+        <groups>
+            <run>
+                <include name="contract" />
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.ocs.backend.*" />
+        </packages>
+    </test>
+</suite>

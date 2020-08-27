@@ -1,0 +1,310 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "game_id": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "game_id",
+        "city",
+        "year"
+      ]
+    }
+  ]
+}

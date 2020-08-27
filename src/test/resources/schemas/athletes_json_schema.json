@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "athlete_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "photo_id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "athlete_id",
+    "name",
+    "surname",
+    "dateOfBirth",
+    "bio",
+    "weight",
+    "height",
+    "photo_id"
+  ]
+}
