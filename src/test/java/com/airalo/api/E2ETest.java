@@ -1,6 +1,6 @@
 package com.airalo.api;
 
-import static com.airalo.api.configuration.ConfigurationManager.property;
+import static com.airalo.api.configuration.ConfigurationManager.getConfig;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -23,7 +23,7 @@ public class E2ETest extends BaseApiTest {
         String description, String brand, String email) {
 
         createTest("Check eSim Purchase Test");
-        var ordersPath = property().ordersUri();
+        var ordersPath = getConfig().ordersUri();
 
         Map<String, String> formParams = Map.of(
             "quantity", quantity,
@@ -55,7 +55,7 @@ public class E2ETest extends BaseApiTest {
             .map(SimData::getIccid)
             .collect(Collectors.toSet());
 
-        var simsPath = property().simsUri();
+        var simsPath = getConfig().simsUri();
         for (String iccid : iccids) {
             Map<String, String> queryParams = Map.of("filter[iccid]", iccid);
 
@@ -64,7 +64,7 @@ public class E2ETest extends BaseApiTest {
             SimListResponse simListResponse = getRestClient().getResponseAsPojo(simsResponse,
                 SimListResponse.class);
             assertThat(simListResponse.getData().size()).as("The size is not correct").isEqualTo(1);
-            assertThat(simListResponse.getData().getFirst().getIccid()).as("The iccid is not correct").isEqualTo(iccid);
+            assertThat(simListResponse.getData().get(0).getIccid()).as("The iccid is not correct").isEqualTo(iccid);
         }
     }
 

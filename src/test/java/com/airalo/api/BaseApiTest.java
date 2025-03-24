@@ -4,6 +4,7 @@ import com.airalo.api.pojo.auth.AuthResponse;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import java.util.Map;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
-import static com.airalo.api.configuration.ConfigurationManager.property;
+import static com.airalo.api.configuration.ConfigurationManager.getConfig;
 import static io.restassured.RestAssured.*;
 import static org.apache.http.HttpStatus.SC_OK;
 
@@ -38,7 +39,8 @@ public class BaseApiTest {
 	@BeforeClass(alwaysRun = true)
 	public void suiteSetup() {
 		setUpEnvApiConfig();
-		restClient = new RestClient(baseURI, port, contentType, null);
+		restClient = new RestClient(baseURI, port, contentType, Map.of());
+		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 	}
 
 	@AfterMethod(alwaysRun = true)
@@ -67,18 +69,17 @@ public class BaseApiTest {
 	}
 
 	private void setUpEnvApiConfig() {
-		baseURI = property().baseUri();
-		port = property().httpPort();
-		contentType = property().contentType();
+		baseURI = getConfig().baseUri();
+		port = getConfig().httpPort();
+		contentType = getConfig().contentType();
 	}
 
 	public String getAccessToken() {
-		// Get Token
-		var tokenPath = property().tokenUri();
+		var tokenPath = getConfig().tokenUri();
 		Map<String, String> tokenHeaders = Map.of("Accept", "application/json");
 		Map<String, String> formParams = Map.of(
-			"client_id", property().clientId(),
-			"client_secret", property().clientSecret(),
+			"client_id", getConfig().clientId(),
+			"client_secret", getConfig().clientSecret(),
 			"grant_type", "client_credentials"
 		);
 

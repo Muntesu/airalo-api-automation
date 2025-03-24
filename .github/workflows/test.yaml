@@ -1,0 +1,41 @@
+name: Run API Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'  # Change if you're using 11, 21, etc.
+          distribution: 'temurin'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Run Contract Tests
+        run: mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/suites/contract.xml
+
+      - name: Run E2E Tests
+        run: mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/e2e.xml
+
+      - name: Run Health Checks
+        run: mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/health.xml
