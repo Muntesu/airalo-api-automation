@@ -1,4 +1,4 @@
-package com.airalo.api;
+package com.airalo.api.client;
 
 import static io.restassured.RestAssured.given;
 
@@ -8,8 +8,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import java.util.Collections;
 import java.util.Map;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 public record RestClient(String restService, int port, String contentType,
                          Map<String, String> defaultHeaders) {

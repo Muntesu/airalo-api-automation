@@ -1,5 +1,6 @@
 package com.airalo.api;
 
+import com.airalo.api.client.RestClient;
 import com.airalo.api.pojo.auth.AuthResponse;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

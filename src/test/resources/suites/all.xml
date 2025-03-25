@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All Test suite" verbose="5">
+
+    <test name="All Tests">
+
+        <packages>
+            <package name="com.airalo.api.*" />
+        </packages>
+    </test>
+</suite>
